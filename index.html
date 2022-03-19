@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylemob.css" />
+    <title>Canvas</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="canvas"></canvas>
+      <div class="tools">
+        <button onclick="undo_last()" type="button" class="button">Undo</button>
+        <button onclick="clear_canvas()" type="button" class="button">
+          Clear
+        </button>
+
+        <div
+          onclick="change_color(this)"
+          class="color-field"
+          style="background: red"
+        ></div>
+        <div
+          onclick="change_color(this)"
+          class="color-field"
+          style="background: black"
+        ></div>
+        <div
+          onclick="change_color(this)"
+          class="color-field"
+          style="background: green"
+        ></div>
+        <div
+          onclick="change_color(this)"
+          class="color-field"
+          style="background: yellow"
+        ></div>
+
+        <input
+          oninput="draw_color = this.value"
+          type="color"
+          class="color-picker"
+        />
+        <input
+          oninput="draw_width = this.value"
+          type="range"
+          min="1"
+          max="100"
+          class="pen-range"
+        />
+      </div>
+    </div>
+    <img src="1.jpeg">
+    <footer>By: Abdulaziz Copyright © - 2022</footer>
+  </body>
+
+ 
+  <script src="main.js"></script>
+</html>
